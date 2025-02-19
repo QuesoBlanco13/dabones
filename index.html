@@ -641,4 +641,261 @@
                 <p class="formula">∫cos(x)dx = sin(x) + C</p>
                 <p class="formula">∫sec²(x)dx = tan(x) + C</p>
                 <p class="formula">∫eˣdx = eˣ + C</p>
-                <p class
+                <p class="formula">∫1/x dx = ln|x| + C</p>
+            </div>
+        </section>
+    </main>
+    
+    <div id="back-to-top" class="back-to-top">↑</div>
+    
+    <footer>
+        <p>© 2025 Dem Bones Math Notes | Created with ♡ and 206 bones</p>
+        <div style="margin-top: 10px;">
+            <svg class="dancing-skeleton footer-skeleton" viewBox="0 0 100 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Skull with math cap -->
+                <g class="skull">
+                    <circle cx="50" cy="30" r="20" fill="white" stroke="#333" stroke-width="1"/>
+                    <path d="M 30 25 Q 50 10 70 25" fill="none" stroke="white" stroke-width="1.5"/>
+                    <path d="M 35 22 L 65 22" stroke="white" stroke-width="1"/>
+                    <circle cx="40" cy="25" r="4" fill="black"/>
+                    <circle cx="60" cy="25" r="4" fill="black"/>
+                    <path d="M 43 40 Q 50 45 57 40" fill="none" stroke="black" stroke-width="2"/>
+                    <!-- Calculator buttons on cap -->
+                    <rect x="38" y="15" width="3" height="3" fill="#333" rx="0.5"/>
+                    <rect x="43" y="15" width="3" height="3" fill="#333" rx="0.5"/>
+                    <rect x="48" y="15" width="3" height="3" fill="#333" rx="0.5"/>
+                    <rect x="53" y="15" width="3" height="3" fill="#333" rx="0.5"/>
+                    <rect x="58" y="15" width="3" height="3" fill="#333" rx="0.5"/>
+                </g>
+                
+                <!-- Body with π symbol -->
+                <line x1="50" y1="50" x2="50" y2="100" stroke="white" stroke-width="3"/>
+                <path d="M 45 75 L 45 85 M 45 75 L 55 75 M 55 75 L 55 85" stroke="white" stroke-width="1.5" fill="none"/>
+                
+                <!-- Arms -->
+                <line x1="50" y1="60" x2="20" y2="80" stroke="white" stroke-width="3"/>
+                <line x1="50" y1="60" x2="80" y2="80" stroke="white" stroke-width="3"/>
+                
+                <!-- Legs -->
+                <line x1="50" y1="100" x2="30" y2="140" stroke="white" stroke-width="3"/>
+                <line x1="50" y1="100" x2="70" y2="140" stroke="white" stroke-width="3"/>
+                
+                <!-- Ribs -->
+                <line x1="35" y1="65" x2="65" y2="65" stroke="white" stroke-width="2"/>
+                <line x1="35" y1="75" x2="65" y2="75" stroke="white" stroke-width="2"/>
+                <line x1="35" y1="85" x2="65" y2="85" stroke="white" stroke-width="2"/>
+                
+                <!-- Math particles -->
+                <g class="math-particles">
+                    <text x="25" y="55" font-size="6" fill="white" opacity="0.7">+</text>
+                    <text x="75" y="55" font-size="6" fill="white" opacity="0.7">÷</text>
+                    <text x="30" y="110" font-size="6" fill="white" opacity="0.7">×</text>
+                    <text x="70" y="110" font-size="6" fill="white" opacity="0.7">−</text>
+                    <text x="20" y="90" font-size="6" fill="white" opacity="0.7">∫</text>
+                    <text x="80" y="90" font-size="6" fill="white" opacity="0.7">∑</text>
+                    <text x="40" y="130" font-size="6" fill="white" opacity="0.7">∂</text>
+                    <text x="60" y="130" font-size="6" fill="white" opacity="0.7">√</text>
+                </g>
+            </svg>
+        </div>
+    </footer>
+
+    <script>
+        // Update title
+        document.title = "Dem Bones Math Notes";
+        document.querySelector('h1').textContent = "Dem Bones Math Notes";
+        
+        // Toggle dark/light mode
+        const toggleSwitch = document.getElementById('theme-toggle');
+        
+        toggleSwitch.addEventListener('change', function() {
+            if(this.checked) {
+                document.documentElement.style.setProperty('--primary', '#f1f1f1');
+                document.documentElement.style.setProperty('--secondary', '#e0e0e0');
+                document.documentElement.style.setProperty('--text', '#333');
+                document.documentElement.style.setProperty('--dark-text', '#f1f1f1');
+                document.querySelectorAll('.dancing-skeleton line, .dancing-skeleton circle, .dancing-skeleton path, .dancing-skeleton text, .dancing-skeleton rect').forEach(elem => {
+                    if(elem.getAttribute('stroke') === 'white') {
+                        elem.setAttribute('stroke', '#333');
+                    }
+                    if(elem.getAttribute('fill') === 'white') {
+                        elem.setAttribute('fill', '#333');
+                    }
+                });
+                document.querySelectorAll('.section-icon').forEach(icon => {
+                    icon.querySelectorAll('path, line, text, circle, rect').forEach(elem => {
+                        if(elem.getAttribute('stroke') === 'white') {
+                            elem.setAttribute('stroke', '#333');
+                        }
+                        if(elem.getAttribute('fill') === 'white') {
+                            elem.setAttribute('fill', '#333');
+                        }
+                    });
+                });
+            } else {
+                document.documentElement.style.setProperty('--primary', '#1a1a2e');
+                document.documentElement.style.setProperty('--secondary', '#16213e');
+                document.documentElement.style.setProperty('--text', '#f1f1f1');
+                document.documentElement.style.setProperty('--dark-text', '#333');
+                document.querySelectorAll('.dancing-skeleton line, .dancing-skeleton circle, .dancing-skeleton path, .dancing-skeleton text, .dancing-skeleton rect').forEach(elem => {
+                    if(elem.getAttribute('stroke') === '#333') {
+                        elem.setAttribute('stroke', 'white');
+                    }
+                    if(elem.getAttribute('fill') === '#333') {
+                        elem.setAttribute('fill', 'white');
+                    }
+                });
+                document.querySelectorAll('.section-icon').forEach(icon => {
+                    icon.querySelectorAll('path, line, text, circle, rect').forEach(elem => {
+                        if(elem.getAttribute('stroke') === '#333') {
+                            elem.setAttribute('stroke', 'white');
+                        }
+                        if(elem.getAttribute('fill') === '#333') {
+                            elem.setAttribute('fill', 'white');
+                        }
+                    });
+                });
+            }
+        });
+        
+        // Smooth scrolling for all anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all links that have hash targets
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return; // Skip if it's just "#"
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(!targetElement) return; // Skip if target element doesn't exist
+                    
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Make skeletons interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const skeletons = document.querySelectorAll('.dancing-skeleton');
+            
+            skeletons.forEach(skeleton => {
+                skeleton.addEventListener('click', function() {
+                    // Random dance move
+                    const dances = ['dance', 'floss', 'jumpscare'];
+                    const randomDance = dances[Math.floor(Math.random() * dances.length)];
+                    
+                    // Reset animation and apply new one
+                    this.style.animation = 'none';
+                    this.offsetHeight; // Trigger reflow
+                    this.style.animation = `${randomDance} ${Math.random() * 2 + 1}s infinite`;
+                    
+                    // Bone rattle sound effect
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    
+                    // Create oscillator for bone sound
+                    const osc = audioContext.createOscillator();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(800 + Math.random() * 800, audioContext.currentTime);
+                    
+                    // Create gain node for volume control
+                    const gainNode = audioContext.createGain();
+                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                    
+                    // Connect and play
+                    osc.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    osc.start();
+                    osc.stop(audioContext.currentTime + 0.3);
+                });
+            });
+            
+            // Easter egg: Konami code plays skeleton dance
+            let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+            let konamiIndex = 0;
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === konamiCode[konamiIndex]) {
+                    konamiIndex++;
+                    if (konamiIndex === konamiCode.length) {
+                        // Activate special skeleton dance
+                        skeletons.forEach(skeleton => {
+                            skeleton.style.animation = 'dance 0.5s infinite';
+                            skeleton.style.filter = 'drop-shadow(0 0 10px var(--accent))';
+                        });
+                        
+                        // Play xylophone scale
+                        const playXylophoneScale = () => {
+                            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                            const notes = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50]; // C5 to C6
+                            
+                            notes.forEach((freq, i) => {
+                                setTimeout(() => {
+                                    const osc = audioContext.createOscillator();
+                                    const gain = audioContext.createGain();
+                                    
+                                    osc.frequency.value = freq;
+                                    osc.type = 'sine';
+                                    gain.gain.value = 0.3;
+                                    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                                    
+                                    osc.connect(gain);
+                                    gain.connect(audioContext.destination);
+                                    
+                                    osc.start();
+                                    osc.stop(audioContext.currentTime + 0.5);
+                                }, i * 200);
+                            });
+                            
+                            // Reset after playing
+                            setTimeout(() => {
+                                skeletons.forEach(skeleton => {
+                                    skeleton.style.animation = '';
+                                    skeleton.style.filter = '';
+                                    // Let default class animation take over
+                                    skeleton.classList.remove('dancing-skeleton');
+                                    void skeleton.offsetWidth;
+                                    skeleton.classList.add('dancing-skeleton');
+                                });
+                            }, notes.length * 200 + 500);
+                        };
+                        
+                        playXylophoneScale();
+                        konamiIndex = 0;
+                    }
+                } else {
+                    konamiIndex = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
